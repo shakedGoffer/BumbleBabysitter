@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Bumble_babysitter1</string>
+
+    <string name="permission_preference">PERMISSION_PREFERENCE</string>
+    <string name="permission_camera">PERMISSION_CAMERA</string>
+    <string name="permission_storage">PERMISSION_STORAGE</string>
+    <string name="permission_location">REQUEST_LOCATION</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+</resources>

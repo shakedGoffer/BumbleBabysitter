@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Report_and_Help"
+    android:orientation="vertical"
+    android:background="@color/white"
+
+    >
+
+    // toolbar
+    <include
+        android:id="@+id/toolbar_babysitter"
+        layout="@layout/toolbar_babysitter"
+        app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:textSize="18dp"
+                android:textStyle="italic"
+                android:text="Explain what problem you are having or specify what you would like to improve in BumbleBabysitter.Please report any real issues"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="35dp"
+                android:id="@+id/textView"
+                />
+
+
+            // Complain / help / report
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textColorHint="#8B000000"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxStrokeWidth="1dp"
+                app:counterOverflowTextColor="@color/colorPrimary"
+                app:hintTextColor="@color/colorPrimary"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+
+                <EditText
+                    android:id="@+id/etComplain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginEnd="35dp"
+                    android:hint="How can we help you?"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:autoLink="all"
+                    android:scrollbars="none"
+                    android:inputType="textMultiLine|textCapSentences"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            //done btn
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDone"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/button_stayle"
+                android:text="Done"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="30dp"
+                android:layout_marginBottom="40dp"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

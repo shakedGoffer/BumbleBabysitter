@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditUserName"
+    android:background="@color/white"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#0099FF"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/wave"
+                />
+        </LinearLayout>
+
+        //icon
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:background="@drawable/icon_2"
+            android:layout_gravity="right"
+            android:layout_marginTop="180dp"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                //title
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Change\nUser name"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.174"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                //profile photo
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfile_photo"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:background="@drawable/profile"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@color/colorPrimary"
+                    android:visibility="gone"
+                    />
+
+
+
+                //Password
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    app:boxBackgroundColor="@color/white"
+                    android:textColorHint="#8B000000"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:hintTextColor="@color/colorPrimary"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:counterOverflowTextColor="@color/colorPrimary"
+                    app:passwordToggleTint="@color/colorPrimary"
+                    android:layout_marginTop="160dp"
+                    >
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:textSize="20dp"
+                        android:id="@+id/etPassword"
+                        android:textColor="@color/black"
+                        android:background="@drawable/round_border"
+                        android:textColorHint="#8B000000"
+                        android:inputType="textPassword"
+                        android:textCursorDrawable="@drawable/color_cursor"
+
+                        android:textColorHighlight="@color/teal_200"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="35dp"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                //New user name
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:boxBackgroundColor="@color/white"
+                    android:textColorHint="#8B000000"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:hintTextColor="@color/colorPrimary"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:counterOverflowTextColor="@color/colorPrimary"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="New user name"
+                        android:textSize="20dp"
+                        android:id="@+id/etNew_UserName"
+                        android:textColor="@color/black"
+                        android:background="@drawable/round_border"
+                        android:textColorHint="#8B000000"
+                        android:textCursorDrawable="@drawable/color_cursor"
+
+                        android:textColorHighlight="@color/teal_200"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="35dp"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                //button done
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:text="Done"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:id="@+id/btnDone"
+                    android:background="@drawable/button_stayle"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:clickable="true"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+</LinearLayout>

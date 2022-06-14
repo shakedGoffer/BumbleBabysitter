@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        android:title=""
+        app:showAsAction="always"
+
+        >
+        <menu>
+            <item
+                android:id="@+id/editProfile"
+                android:title="Edit profile"
+                android:orderInCategory="100"
+                android:icon="@drawable/ic_edit_profile"
+                app:showAsAction="ifRoom"
+                />
+
+            <item
+                android:id="@+id/change_UserName"
+                android:title="Change User name "
+                android:orderInCategory="200"
+                android:icon="@drawable/ic_change_name"
+                app:showAsAction="never"
+                />
+
+            <item
+                android:id="@+id/change_password"
+                android:title="Change password"
+                android:orderInCategory="300"
+                android:icon="@drawable/ic_change_password"
+                app:showAsAction="never"
+                />
+
+            <item
+                android:id="@+id/blocked_accounts"
+                android:title="Blocked accounts"
+                android:orderInCategory="400"
+                android:icon="@drawable/ic_block"
+                app:showAsAction="never"
+                />
+
+            <item
+                android:id="@+id/help"
+                android:title="Help"
+                android:orderInCategory="500"
+                android:icon="@drawable/ic_help"
+                app:showAsAction="never"
+                />
+
+            <item
+                android:id="@+id/log_out"
+                android:title="Log out"
+                android:orderInCategory="600"
+                android:icon="@drawable/ic_log_out"
+                app:showAsAction="never"
+                />
+        </menu>
+    </item>
+
+
+
+
+
+</menu>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:menu="@menu/menu_babysitter"
+    android:id="@+id/toolbar_babysitter"
+    android:background="@color/colorPrimaryDark"
+    android:minHeight="?attr/actionBarSize"
+    app:navigationIcon="@drawable/ic_arrow_back"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/Theme.AppCompat.Light"
+    >
+</androidx.appcompat.widget.Toolbar>

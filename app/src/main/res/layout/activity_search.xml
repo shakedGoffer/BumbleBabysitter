@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:id="@+id/lyMain"
+    >
+
+
+    // Search for babysitter
+    <SearchView
+        android:iconifiedByDefault="false"
+        android:queryHint="Search for babysitter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Babysitter_ListSearchView"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/search_view_stayle"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        >
+    </SearchView>
+
+    //Spinner Filter
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="15dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:text="Filter:"
+            />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:id="@+id/spFilter"
+            android:scrollbarSize="20dp"
+            />
+    </LinearLayout>
+
+    //Spinner sort
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="15dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:text="Sort by:"
+            />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:id="@+id/spSort"
+            android:scrollbarSize="20dp"
+            />
+    </LinearLayout>
+
+    // Babysitter List
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/BabysitterListView"
+        android:divider="#4B000000"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@color/colorPrimary"
+        android:launchMode="singleTop"
+        />
+    <!--
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:id="@+id/lyScrollView"
+
+                >
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textSize="35dp"
+                   android:textColor="@color/black"
+                   android:text="Search for babysitter"
+                   android:gravity="center"
+                   android:layout_marginBottom="60dp"
+                   android:layout_marginTop="20dp"
+                   android:layout_gravity="center"
+                   />
+
+            </LinearLayout>
+        </ScrollView>
+        -->
+
+
+    <!--
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation"
+        android:background="?android:attr/windowBackground"
+        />
+     -->
+
+
+</LinearLayout>

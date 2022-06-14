@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        >
+
+        //profile photo
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfile_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/profile"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/Layout"
+            >
+            // Babysitter user name
+            <TextView
+                android:id="@+id/tvBabysitterUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:text="dddd"
+                />
+
+            // Babysitter name
+            <TextView
+                android:id="@+id/tvBabysitterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="#8F000000"
+                android:text="dddd"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                // Babysitter wage
+                <TextView
+                    android:id="@+id/tvBabysitterWage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="#8F000000"
+                    android:text="Wage = 2$"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    />
+
+                // Babysitter age
+                <TextView
+                    android:id="@+id/tvBabysitterAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="#8F000000"
+                    android:text="Age = 2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    />
+            </LinearLayout>
+
+
+            // Babysitter rate
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/rateLayout"
+                >
+
+                //current rate (stars)
+                <RatingBar
+                    android:id="@+id/rb_Rating"
+                    android:stepSize="0.1"
+                    android:isIndicator="true"
+                    android:rating="0"
+                    android:max="5"
+                    android:numStars="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@android:style/Widget.Holo.RatingBar.Small"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginTop="3dp"
+                    />
+
+                //number of ratings
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:textColor="#86000000"
+                    android:text="(0)"
+                    android:id="@+id/tvNumberOfRatings"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

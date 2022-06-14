@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        android:title=""
+        app:showAsAction="always">
+
+        <menu>
+            <item
+                android:id="@+id/report"
+                android:title="Report"
+                android:orderInCategory="100"
+                android:icon="@drawable/ic_report"
+                app:showAsAction="ifRoom"
+                />
+
+            <item
+                android:id="@+id/block"
+                android:title="Block"
+                android:orderInCategory="200"
+                android:icon="@drawable/ic_block"
+                app:showAsAction="never"
+                />
+
+            <item
+                android:id="@+id/help"
+                android:title="Help"
+                android:orderInCategory="300"
+                android:icon="@drawable/ic_help"
+                app:showAsAction="never"
+                />
+        </menu>
+    </item>
+
+</menu>

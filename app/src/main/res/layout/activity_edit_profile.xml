@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfile"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#0099FF"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/wave"
+                />
+
+        </LinearLayout>
+
+        //icon
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="75dp"
+            android:background="@drawable/icon_2"
+            android:layout_gravity="right"
+            android:layout_marginTop="180dp"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                //title
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="40dp"
+                    android:text="Edit Profile"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.174"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                //profile photo
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfile_photo"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="150dp"
+                    app:civ_border_width="3dp"
+                    app:civ_border_color="@color/colorPrimary"
+                    android:background="@drawable/profile"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile photo"
+                    android:textSize="20dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+                //children num
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:textColorHint="#8B000000"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:counterOverflowTextColor="@color/colorPrimary"
+                    app:hintTextColor="@color/colorPrimary"
+                    >
+
+                    <EditText
+                        android:id="@+id/etChildren_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/round_border"
+                        android:hint="number of children"
+                        android:inputType="phone"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/teal_200"
+
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="20dp"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                //children ages
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColorHint="#8B000000"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:counterOverflowTextColor="@color/colorPrimary"
+                    app:hintTextColor="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/etAges"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/round_border"
+                        android:hint="children ages"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/teal_200"
+
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="20dp"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                //location + address
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColorHint="#8B000000"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeColor="@color/colorPrimary"
+                    app:boxStrokeWidth="0dp"
+                    app:boxStrokeWidthFocused="0dp"
+                    app:counterOverflowTextColor="@color/colorPrimary"
+                    app:hintTextColor="@color/colorPrimary">
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginEnd="35dp"
+                        android:background="@drawable/round_border"
+                        android:hint="Address"
+                        android:textColor="@color/black"
+                        android:textColorHighlight="@color/teal_200"
+                        android:editable="false"
+
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="20dp"
+
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                //salary
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hourly wage:"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    // tv display salary(seek bar)
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        android:id="@+id/tvSeekBar"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$"
+                        android:textSize="25dp"
+                        android:textColor="@color/black"
+                        />
+
+                    //seek bar salary
+                    <SeekBar
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/SeekBar"
+                        android:background="#0C000000"
+                        />
+
+                </LinearLayout>
+
+                //done btn
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDone"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/button_stayle"
+                    android:text="Done"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="30dp"
+                    android:layout_marginBottom="40dp"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+</LinearLayout>

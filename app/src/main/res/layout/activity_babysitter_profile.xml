@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BabysitterProfile"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    >
+
+    <include
+        android:id="@+id/toolbar_babysitter"
+        layout="@layout/toolbar_babysitter"
+        app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+        />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            //Babysitter details
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                >
+
+                //profile photo
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/ivProfile_photo"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/profile"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="3dp"
+                    android:layout_marginLeft="5dp"
+                    />
+
+
+                // Message/WhatsApp and Favorite
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="10dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp"
+                        >
+
+                        //btn Message
+                        <Button
+                            android:id="@+id/btnMessage"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="5dp"
+                            android:text="Message"
+                            android:textAllCaps="false"
+                            android:textColor="#0099ff"
+                            android:textSize="12dp"
+                            app:icon="@drawable/ic_message"
+                            app:strokeColor="#0099ff"
+                            app:strokeWidth="1dp"
+                            />
+
+                        //btn WhatsApp
+                        <Button
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="10dp"
+                            android:text="WhatsApp"
+                            android:textAllCaps="false"
+                            android:textColor="#0099ff"
+                            android:textSize="12dp"
+                            app:icon="@drawable/ic_whatsapp"
+                            app:strokeColor="#0099ff"
+                            app:strokeWidth="1dp"
+                            android:id="@+id/btnWhatsApp"
+                            />
+
+                    </LinearLayout>
+
+                    //btnFavorite
+                    <Button
+                        android:id="@+id/btnFavorite"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:backgroundTint="#0099ff"
+                        android:text="Favorite"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:strokeColor="#0099ff"
+                        app:strokeWidth="1dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            // Babysitter name
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="wdd"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tvBabysitterName"
+                android:layout_marginTop="5dp"
+                />
+
+            // specialty
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specialty: all"
+                android:textColor="#8F000000"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/tvBabysitter_specialty"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                // wage
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wage: 0$"
+                    android:textColor="#8F000000"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tvBabysitterWage"
+                    />
+
+                // age
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Age: 1"
+                    android:textColor="#8F000000"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/tvBabysitterAge"
+                    />
+
+            </LinearLayout>
+
+            //current rat
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                //current rat (stars)
+                <RatingBar
+                    android:id="@+id/rb_CurrentRat"
+                    android:stepSize="0.1"
+                    android:isIndicator="true"
+                    android:rating="0"
+                    android:max="5"
+                    android:numStars="5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@android:style/Widget.Holo.RatingBar"
+                    app:layout_constraintStart_toStartOf="parent"
+                    />
+
+                //number of ratings
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="#86000000"
+                    android:text="(0)"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/tvNumRatings"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Comments (0)"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:id="@+id/tvNumber_OfComments"
+                />
+
+            // Comments ListView
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lvComments"
+                android:divider="#4B000000"
+                android:dividerHeight="0.2dp"
+                android:launchMode="singleTop"
+                android:stackFromBottom="true"
+                android:layout_marginBottom="90dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+
+        // Add comment
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            >
+
+            // button put in firebase
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/btnAddComment"
+                android:backgroundTint="@color/colorPrimary"
+                android:src="@drawable/ic_arrow_back"
+                android:layout_marginBottom="2dp"
+                />
+
+            //Comment
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="65dp"
+                android:textColorHint="#8B000000"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:counterOverflowTextColor="@color/colorPrimary"
+                app:hintTextColor="@color/colorPrimary"
+                android:layout_gravity="center"
+                >
+
+                <EditText
+                    android:id="@+id/etComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_border"
+                    android:hint="Write a comment"
+                    android:textColor="@color/black"
+                    android:textColorHighlight="@color/teal_200"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="15dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+
+
+
+
+
+
+    </FrameLayout>
+
+
+
+</LinearLayout>
